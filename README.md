@@ -24,13 +24,11 @@
 + JST1.25 4 Pins 
 
 Product spec download links:
-http://www.jczn1688.com/zlxz
+https://www.aliexpress.com/item/1005006729377800.html
 
-https://aliexpress.ru/item/1005006729657546.html
+JST 1.25mm 4pin/2pin connectors
 
-1.25mm 4pin 30cm,  1.25mm 2pin 30cm
-
-https://aliexpress.ru/item/1005004837211340.html
+https://www.aliexpress.com/item/32868639159.html
 
 ![JC4827W543_board](/Pictures/1-3.png)
 
@@ -43,32 +41,20 @@ Select board:
 OR
 + ESP32S3 Dev module
 
-Install library:
-+ GFX Library for Arduino by Moon On Our Nation (ver 1.4.6)  https://github.com/moononournation/Arduino_GFX
+Install library (tested):
++ GFX Library for Arduino by Moon On Our Nation (ver 1.6.1)  https://github.com/moononournation/Arduino_GFX
 + lvgl by kisvegabor (ver 8.4.0)    https://github.com/lvgl/lvgl/releases/tag/v8.4.0
 + for capacitive touch: TouchLib by mmMicky add library from zip file  https://github.com/mmMicky/TouchLib
 + for resistance touch: XPT2046_Touchscreen by Paul Stoffregen (ver. 1.4) https://github.com/PaulStoffregen/XPT2046_Touchscreen.git
 + for resistance touch modify touch.h file as shown below:
 
-```
-  /* uncomment for XPT2046 */
- #define TOUCH_XPT2046
- #define TOUCH_XPT2046_SCK 12
- #define TOUCH_XPT2046_MISO 13
- #define TOUCH_XPT2046_MOSI 11
- #define TOUCH_XPT2046_CS 38
- #define TOUCH_XPT2046_INT 3
- #define TOUCH_XPT2046_ROTATION 0
- #define TOUCH_XPT2046_SAMPLES 50
 
-//uncomment for most capacitive touchscreen
-//#define TOUCH_MODULES_GT911 // GT911 / CST_SELF / CST_MUTUAL / ZTW622 / L58 / FT3267 / FT5x06
-//#define TOUCH_MODULE_ADDR GT911_SLAVE_ADDRESS1 // CTS328_SLAVE_ADDRESS / L58_SLAVE_ADDRESS / CTS826_SLAVE_ADDRESS / CTS820_SLAVE_ADDRESS / CTS816S_SLAVE_ADDRESS / FT3267_SLAVE_ADDRESS / FT5x06_ADDR / GT911_SLAVE_ADDRESS1 / GT911_SLAVE_ADDRESS2 / ZTW622_SLAVE1_ADDRESS / ZTW622_SLAVE2_ADDRESS
-//#define TOUCH_SCL 4
-// #define TOUCH_SDA 8
-// #define TOUCH_RES 38
-// #define TOUCH_INT 3
-```
+## PlatformIO examples 
+Copy board definitions from 'PlatformIO' directory to platformio.
+
+Select appropriate build environment for your board /capacitive/resistive/notouch/.
+
+
 + Please config the touch panel in touch.h
 + use functions from touch.h as shown below:
 ```

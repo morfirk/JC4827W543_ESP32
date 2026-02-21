@@ -1,0 +1,74 @@
+{
+    "build": {
+        "arduino": {
+            "ldscript": "esp32s3_out.ld",
+            "partitions": "default.csv",
+            "memory_type": "qio_opi"
+        },
+        "core": "esp32",
+        "extra_flags": [
+            "-DARDUINO_ESP32S3_DEV",
+            "-DARDUINO_USB_MODE=1",
+            "-DARDUINO_RUNNING_CORE=1",
+            "-DARDUINO_EVENT_RUNNING_CORE=1",
+            "-DBOARD_HAS_PSRAM",            
+            "-DDISPLAY_DRIVER=NV3401",
+            "-DDISPLAY_TYPE_IPS=1",
+            "-DDISPLAY_WIDTH=480",
+            "-DDISPLAY_HEIGHT=272",
+            "-DDISPLAY_RESET=",
+            "-DDISPLAY_BACKLIGHT=1",
+            "-DDISPLAY_QSPI_CS=45",
+            "-DDISPLAY_QSPI_SCK=47",
+            "-DDISPLAY_QSPI_D0=21",
+            "-DDISPLAY_QSPI_D1=48",
+            "-DDISPLAY_QSPI_D2=40",
+            "-DDISPLAY_QSPI_D3=39",
+            "-DBOARD_HAS_TOUCH",
+            "-DTOUCH_GT911_MODULE=1",
+            "-DTOUCH_GT911_ADDR=0X5D",
+            "-DTOUCH_GT911_SCK=4",
+            "-DTOUCH_GT911_SDA=8",
+            "-DTOUCH_GT911_RES=38",
+            "-DTOUCH_GT911_INT=3"
+
+        ],
+        "f_cpu": "240000000L",
+        "f_flash": "80000000L",
+        "flash_mode": "qio",
+        "hwids": [
+            [
+                "0x303A",
+                "0x1001"
+            ]
+        ],
+        "mcu": "esp32s3",
+        "variant": "esp32s3_wroom_1_N4R8"
+    },
+    "connectivity": [
+        "bluetooth",
+        "wifi"
+    ],
+    "debug": {
+        "default_tool": "esp-builtin",
+        "onboard_tools": [
+            "esp-builtin"
+        ],
+        "openocd_target": "esp32s3.cfg"
+    },
+    "frameworks": [
+        "arduino",
+        "espidf"
+    ],
+    "name": "Guiton (JC4827X543C) ESP32-S3-N4R8 (4 MB QD, 8 MB PSRAM)",
+    "upload": {
+        "flash_size": "4MB",
+        "maximum_ram_size": 532480,
+        "maximum_size": 4194304,
+        "wait_for_upload_port": true,
+        "require_upload_port": true,
+        "speed": 460800
+    },
+    "url": "https://www.aliexpress.com/store/1102410813",
+    "vendor": "Guition"
+}
